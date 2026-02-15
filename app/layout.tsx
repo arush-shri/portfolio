@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { fontInter } from "@/lib/fonts";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ export default function RootLayout({
 			<body className={`${fontInter.className}`}>
 				<Header />
 				{children}
-				{children}
+				<Footer />
 			</body>
 		</html>
 	);
