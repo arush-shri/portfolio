@@ -38,7 +38,7 @@ export default function Header(): ReactElement {
 				show ? "translate-y-0" : "-translate-y-full"
 			}`}
 		>
-			<div className="flex justify-between px-10 sm:px-20 py-[1.5vh] items-center bg-white shadow-sm">
+			<div className="flex justify-between px-10 sm:px-20 py-[1.7vh] items-center bg-white shadow-xs">
 				<Link
 					href="/"
 					className="flex flex-row gap-x-[1vw] cursor-pointer items-center"
@@ -92,7 +92,7 @@ export default function Header(): ReactElement {
 				</button>
 			</div>
 			{mobileOpen && (
-				<div className="md:hidden pt-6 justify-self-end flex flex-col gap-4 px-6 bg-white shadow-md h-[100vh] w-2/3 sm:w-1/2">
+				<div className="md:hidden pt-6 justify-self-end flex flex-col gap-4 px-6 bg-white shadow-xs h-[100vh] w-2/3 sm:w-1/2">
 					<HeaderNavLink title={"Work"} navTo={"/work"} />
 					<HeaderNavLink title={"About"} navTo={"/about"} />
 					<span

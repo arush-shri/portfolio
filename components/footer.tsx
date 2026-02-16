@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 
 export default function Footer(): ReactElement {
 	return (
-		<div className="px-5 sm:px-12 w-full justify-between items-center flex flex-row gap-x-[1vw] py-[1.5vh]">
+		<div className="px-5 sm:px-12 bg-white w-full justify-between items-center flex flex-row gap-x-[1vw] py-[1.5vh]">
 			<div className="flex flex-row gap-x-[1vw] items-center">
 				<Copyright className="w-5 sm:w-6 text-[#6b7280]" />
 				<span className="text-[#6b7280] text-sm sm:text-lg">
