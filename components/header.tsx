@@ -59,16 +59,16 @@ export default function Header(): ReactElement {
 					<HeaderNavLink title={"About"} navTo={"/about"} />
 					<a
 						href="/#resume"
-						className="text-lg cursor-pointer transition-all duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB]"
+						className="text-lg cursor-pointer transition-all hover:-translate-y-1 duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB]"
 					>
 						Resume
 					</a>
-					<button
-						onClick={handleContact}
+					<a
+						href="/#contact"
 						className="px-4 py-2 bg-[#0EA5A4] text-white rounded-lg hover:bg-[#0F1724] transition-all duration-200 hover:-translate-y-1"
 					>
 						Let's Talk
-					</button>
+					</a>
 				</div>
 				<button
 					onClick={() => setMobileOpen(!mobileOpen)}

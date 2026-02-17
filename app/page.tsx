@@ -1,6 +1,13 @@
 import ExperienceList from "@/components/experienceList";
 import WorkCard, { ViewWorkButton } from "@/components/workCard";
-import { Download, FileText, Github, Linkedin } from "lucide-react";
+import {
+	Calendar,
+	Download,
+	FileText,
+	Github,
+	Linkedin,
+	Mail,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -21,9 +28,12 @@ export default function Home() {
 					</span>
 
 					<div className="flex flex-row w-full gap-x-[1.5vw] pt-[5dvh] md:pt-[8dvh] items-center">
-						<button className="text-md md:text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1">
+						<a
+							href="/work"
+							className="text-md md:text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
+						>
 							View Work
-						</button>
+						</a>
 						<a
 							href="/docs/Arush Shrivastava.pdf"
 							download
@@ -98,7 +108,7 @@ export default function Home() {
 				<a
 					href="/docs/Arush Shrivastava.pdf"
 					download
-					className="flex flex-row items-center justify-between px-[3dvw] py-4 mb-[5dvh] border-1 border-[#0000001F] 
+					className="flex flex-row items-center justify-between px-[3dvw] py-4 mb-[8dvh] border-1 border-[#0000001F] 
                     rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 				>
 					<div className="flex flex-row item-center gap-x-[2vw]">
@@ -115,6 +125,53 @@ export default function Home() {
 						</div>
 					</div>
 					<Download className="w-5 sm:w-6 text-[#000000]" />
+				</a>
+			</section>
+			<section
+				id="contact"
+				className="flex flex-col justify-center px-5 lg:px-40"
+			>
+				<a
+					href="/docs/Arush Shrivastava.pdf"
+					download
+					className="flex flex-col justify-between bg-[#0f1724] px-[3dvw] py-7 mb-[8dvh] border-3
+                    border-[#0e9e9d] shadow-lg rounded-xl cursor-pointer"
+				>
+					<span className="font-semibold text-lg text-[#adbcbf]">
+						LET'S COLLABORATE
+					</span>
+					<span className="text-2xl font-bold text-[#fff] mt-[1dvh]">
+						Ready to build something exceptional?
+					</span>
+					<span className="font-semibold text-lg text-[#adbcbf] mt-[1dvh]">
+						Open to impactful engineering roles and high-leverage
+						freelance work.
+					</span>
+					<div className="w-full flex flex-row justify-between sm:justify-start gap-x-[1.5vw] mt-[4dvh] items-center">
+						<button
+							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 bg-[#0EA5A4] items-center
+                            rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
+						>
+							<Mail className="w-5 text-white" />
+							<span className="text-lg text-white">Email Me</span>
+						</button>
+						<button
+							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 items-center border-1 border-white
+                            rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
+						>
+							<Linkedin className="w-5 text-white" />
+							<span className="text-lg text-white">LinkedIn</span>
+						</button>
+						<button
+							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 items-center border-1 border-[#0EA5A4]
+                            rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
+						>
+							<Calendar className="w-5 text-[#0EA5A4]" />
+							<span className="text-lg text-[#0EA5A4]">
+								Calendly
+							</span>
+						</button>
+					</div>
 				</a>
 			</section>
 		</div>

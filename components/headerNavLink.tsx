@@ -18,7 +18,7 @@ export default function HeaderNavLink({
 		<Link
 			key={navTo}
 			href={navTo}
-			className={`text-lg transition-all duration-200 ease-in-out hover:text-[#0F1724] ${
+			className={`text-lg transition-all hover:-translate-y-1 duration-200 ease-in-out hover:text-[#0F1724] ${
 				isActive ? "text-[#0F1724] font-semibold" : "text-[#98A0AB]"
 			}`}
 		>
