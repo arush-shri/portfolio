@@ -19,7 +19,8 @@ export default function WorkCard({ index }: { index: number }): ReactElement {
 	return (
 		<div
 			onClick={handleClick}
-			className="flex flex-col rounded-xl w-full overflow-hidden border-1 border-[#0000001F] cursor-pointer"
+			className="flex flex-col mb-[3dvh] md:mb-0 rounded-xl w-full overflow-hidden bg-white shadow-xs
+            border-1 border-[#0000001F] cursor-pointer"
 		>
 			<Image
 				src={data.images[0]}
@@ -27,7 +28,7 @@ export default function WorkCard({ index }: { index: number }): ReactElement {
 				alt="Project Image"
 				width={512}
 				height={512}
-				className="w-full h-[30dvh] object-cover"
+				className="w-full h-[34dvh] md:h-[32dvh] object-cover"
 			/>
 			<div className="px-[2vw] pb-[2vw] flex flex-col">
 				<span className="font-semibold text-[#0F1724] text-xl mt-[2dvh]">
@@ -39,7 +40,7 @@ export default function WorkCard({ index }: { index: number }): ReactElement {
 				<div className="flex flex-row gap-x-[1vw] mt-[2dvh]">
 					{data.stack.slice(0, 3).map((item, index) => (
 						<span
-							className="text-[#064B47] px-[1vw] py-[0.2dvh] bg-[#d8f3f1] rounded-full text-md"
+							className="text-[#064B47] px-[3vw] md:px-[1vw] py-[0.2dvh] bg-[#d8f3f1] rounded-full text-md"
 							key={index}
 						>
 							{item}

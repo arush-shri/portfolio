@@ -11,13 +11,13 @@ export default function ExperienceList(): ReactElement {
 		<div className="flex flex-col w-full mt-[2dvh]">
 			{data.map((item, index) => (
 				<div
-					className={`grid grid-cols-4 gap-x-[2vw] py-[3dvh] border-b border-[#0000001F] last:border-b-0`}
+					className={`md:grid md:grid-cols-4 gap-x-[2vw] py-[3dvh] border-b border-[#0000001F] last:border-b-0`}
 					key={index}
 				>
 					<div>
 						<span className="text-[#98A0AB] text-md">{`${item.startAt} — ${item.endAt}`}</span>
 					</div>
-					<div className="flex flex-col col-span-3">
+					<div className="flex flex-col md:col-span-3 mt-[1dvh] md:mt-0">
 						<span className="font-semibold text-[#0F1724] text-2xl">
 							{item.company}
 						</span>

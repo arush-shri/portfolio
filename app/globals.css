@@ -14,5 +14,9 @@
 
 @theme {
   --color-grey-light: #f6f7f9; 
-  --color-grey-dark: #98a0ab; 
+  --color-grey-dark: #eeeff1; 
+}
+
+html {
+  scroll-behavior: smooth;
 }

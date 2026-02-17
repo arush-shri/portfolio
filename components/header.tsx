@@ -57,12 +57,12 @@ export default function Header(): ReactElement {
 				<div className="hidden md:flex flex-row gap-x-[2vw] items-center">
 					<HeaderNavLink title={"Work"} navTo={"/work"} />
 					<HeaderNavLink title={"About"} navTo={"/about"} />
-					<span
-						onClick={handleResume}
-						className="text-lg transition-all duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB]"
+					<a
+						href="/#resume"
+						className="text-lg cursor-pointer transition-all duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB]"
 					>
 						Resume
-					</span>
+					</a>
 					<button
 						onClick={handleContact}
 						className="px-4 py-2 bg-[#0EA5A4] text-white rounded-lg hover:bg-[#0F1724] transition-all duration-200 hover:-translate-y-1"
@@ -95,12 +95,12 @@ export default function Header(): ReactElement {
 				<div className="md:hidden pt-6 justify-self-end flex flex-col gap-4 px-6 bg-white shadow-xs h-[100vh] w-2/3 sm:w-1/2">
 					<HeaderNavLink title={"Work"} navTo={"/work"} />
 					<HeaderNavLink title={"About"} navTo={"/about"} />
-					<span
-						onClick={handleResume}
-						className="text-lg transition-all duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB]"
+					<a
+						href="/#resume"
+						className="text-lg transition-all duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB] cursor-pointer"
 					>
 						Resume
-					</span>
+					</a>
 					<button
 						onClick={handleContact}
 						className="text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg hover:bg-[#0F1724] transition-all duration-200 hover:-translate-y-1"

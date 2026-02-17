@@ -6,13 +6,13 @@ import Image from "next/image";
 export default function Home() {
 	return (
 		<div className="flex flex-col">
-			<section className="flex flex-row min-h-screen items-center justify-between px-20">
-				<div className="flex w-[50vw] min-h-screen flex-col justify-start pt-[15dvh]">
-					<span className="font-bold text-[#0F1724] text-5xl">
+			<section className="flex flex-col md:flex-row min-h-screen items-center justify-between px-5 lg:px-20">
+				<div className="flex w-full md:w-1/2 md:min-h-screen flex-col justify-start pt-[8dvh] md:pt-[15dvh] order-2 md:order-1">
+					<span className="font-bold text-[#0F1724] text-4xl md:text-5xl">
 						Full-Stack Engineer Building Scalable, High-Performance
 						Software.
 					</span>
-					<span className="text-[#98A0AB] text-xl pt-2">
+					<span className="text-[#98A0AB] text-xl md:text-xl pt-4 md:pt-3">
 						Hi, I’m Arush — I architect and develop scalable
 						software systems that prioritize performance,
 						reliability, and user experience. From frontend
@@ -20,71 +20,81 @@ export default function Home() {
 						designed to scale.
 					</span>
 
-					<div className="flex flex-row gap-x-[1.5vw] pt-[8dvh] items-center">
-						<button className="text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1">
+					<div className="flex flex-row w-full gap-x-[1.5vw] pt-[5dvh] md:pt-[8dvh] items-center">
+						<button className="text-md md:text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1">
 							View Work
 						</button>
-						<button className="flex flex-row items-center gap-x-[0.5vw] text-lg px-4 py-2 border-1 border-[#0000001F] text-[#0F1724] rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1">
+						<a
+							href="/docs/Arush Shrivastava.pdf"
+							download
+							className="flex flex-row items-center gap-x-[0.5vw] text-md md:text-lg px-4 py-2 border-1 border-[#0000001F] text-[#0F1724] rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
+						>
 							<Download className="w-5 sm:w-6 text-[#0F1724]" />
 							<span>Download CV</span>
-						</button>
+						</a>
 					</div>
 
-					<div className="flex flex-row gap-x-[1vw] pt-[10dvh] items-center">
+					<div className="flex flex-row gap-x-[1vw] pt-[7dvh] md:pt-[10dvh] items-center">
 						<a
 							href="https://github.com/arush-shri"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Github className="w-5 sm:w-6 text-[#5a636f] hover:text-[#000000] transition" />
+							<Github className="md:w-6 text-[#5a636f] hover:text-[#000000] transition" />
 						</a>
 						<a
 							href="https://www.linkedin.com/in/arush-shri"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Linkedin className="w-5 sm:w-6 text-[#5a636f] hover:text-[#000000] transition" />
+							<Linkedin className="md:w-6 text-[#5a636f] hover:text-[#000000] transition" />
 						</a>
 					</div>
 				</div>
-				<div className="flex w-[50vw] min-h-screen flex-col justify-center items-end pt-[6dvh]">
+				<div
+					className="flex w-full md:w-1/2 md:min-h-screen flex-col justify-center items-center 
+                md:items-end pt-[15dvh] order-1 md:order-2"
+				>
 					<Image
-						className="rounded-4xl w-3/4"
+						className="rounded-full md:rounded-4xl w-3/4 aspect-square md:aspect-auto object-cover md:h-auto"
 						src="/images/myPic.png"
-						alt="Next.js logo"
+						alt="My pic"
 						width={801}
 						height={988}
 						priority
 					/>
 				</div>
 			</section>
-			<section className="min-h-screen flex flex-col justify-center px-20">
+			<section className="md:min-h-screen flex flex-col justify-center px-5 lg:px-20 mt-[8dvh] md:mt-0">
 				<div className="flex flex-row w-full justify-between items-center">
 					<div className="flex flex-col">
-						<span className="font-bold text-[#0F1724] text-4xl">
+						<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
 							Selected Work
 						</span>
-						<span className="text-[#98A0AB] text-xl mt-[2dvh]">
+						<span className="text-[#98A0AB] text-md md:text-xl mt-[2dvh] ">
 							A selection of projects I've worked on recently.
 						</span>
 					</div>
 					<ViewWorkButton />
 				</div>
-				<div className="flex flex-row gap-x-[2vw] w-full mt-[7dvh] justify-between items-center">
+				<div className="flex flex-col md:flex-row gap-x-[2vw] w-full mt-[7dvh] justify-between items-center">
 					<WorkCard index={0} />
 					<WorkCard index={1} />
 					<WorkCard index={2} />
 				</div>
 			</section>
-			<section className="min-h-screen flex flex-col justify-center px-20">
+			<section className="min-h-screen flex flex-col justify-center px-5 lg:px-20">
 				<div className="flex flex-row w-full justify-between items-center">
-					<span className="font-bold text-[#0F1724] text-4xl">
+					<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
 						Experience
 					</span>
 				</div>
 				<ExperienceList />
 			</section>
-			<section className="flex flex-col justify-center px-40">
+			<section
+				id="resume"
+				className="flex flex-col justify-center px-5 lg:px-40"
+			>
 				<a
 					href="/docs/Arush Shrivastava.pdf"
 					download
