@@ -1,4 +1,5 @@
 import ExperienceList from "@/components/experienceList";
+import SkillsGroup from "@/components/skillsGroup";
 import WorkCard, { ViewWorkButton } from "@/components/workCard";
 import {
 	Calendar,
@@ -9,8 +10,9 @@ import {
 	Mail,
 } from "lucide-react";
 import Image from "next/image";
+import { ReactElement } from "react";
 
-export default function Home() {
+export default function Home(): ReactElement {
 	return (
 		<div className="flex flex-col">
 			<section className="flex flex-col md:flex-row min-h-screen items-center justify-between px-5 lg:px-20">
@@ -20,11 +22,10 @@ export default function Home() {
 						Software.
 					</span>
 					<span className="text-[#98A0AB] text-xl md:text-xl pt-4 md:pt-3">
-						Hi, I’m Arush — I architect and develop scalable
-						software systems that prioritize performance,
-						reliability, and user experience. From frontend
-						interfaces to backend infrastructure, I build solutions
-						designed to scale.
+						Hi, I’m Arush. I architect and build scalable web and
+						mobile applications — from backend infrastructure and
+						APIs to intuitive user interfaces — prioritizing
+						performance, reliability, and long-term maintainability.
 					</span>
 
 					<div className="flex flex-row w-full gap-x-[1.5vw] pt-[5dvh] md:pt-[8dvh] items-center">
@@ -100,6 +101,107 @@ export default function Home() {
 					</span>
 				</div>
 				<ExperienceList />
+			</section>
+			<section className="flex flex-col md:flex-row min-h-screen justify-between px-5 lg:px-20">
+				<div className="flex w-full md:w-2/5 md:min-h-screen flex-col justify-start">
+					<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
+						Technical Skills
+					</span>
+					<span className="text-[#98A0AB] text-lg pt-4">
+						Modern web stack across frontend, backend, and
+						infrastructure with a strong focus on product quality
+						and reliability.
+					</span>
+				</div>
+				<div className="flex flex-col w-full md:w-3/5 justify-start md:min-h-screen md:pl-8 flex-col pb-[8dvh] pt-[2dvh] md:pt-0">
+					<SkillsGroup
+						title="Frontend"
+						subText="Interfaces, interactions & performance"
+						skills={[
+							"React",
+							"Next.js",
+							"TypeScript",
+							"JavaScript (ES6+)",
+							"Tailwind CSS",
+							"Responsive Design",
+							"Accessibility",
+							"Performance Optimization",
+							"State Management",
+							"Component Architecture",
+						]}
+						extra=""
+					/>
+					<SkillsGroup
+						title="Backend"
+						subText="API design, authentication, and scalable server architecture."
+						skills={[
+							"Node.js",
+							"Express.js",
+							"RESTful API Design",
+							"GraphQL",
+							"Authentication & Authorization",
+							"JWT & OAuth",
+							"Serverless Architecture",
+							"Microservices",
+							"Input Validation",
+							"API Security Best Practices",
+						]}
+						extra="pt-[3dvh]"
+					/>
+					<SkillsGroup
+						title="Data & Persistence"
+						subText="Schema design, performance tuning & data integrity."
+						skills={[
+							"PostgreSQL",
+							"MongoDB",
+							"Redis",
+							"Database Schema Design",
+							"Indexing & Query Optimization",
+							"Data Modeling",
+							"Caching Strategies",
+						]}
+						extra="pt-[3dvh]"
+					/>
+					<SkillsGroup
+						title="Infrastructure"
+						subText="Cloud architecture, automation & observability."
+						skills={[
+							"AWS",
+							"Docker",
+							"CI/CD Pipelines",
+							"GitHub Actions",
+							"Cloud Deployment",
+							"Environment Configuration",
+							"Monitoring & Logging",
+						]}
+						extra="pt-[3dvh]"
+					/>
+					<SkillsGroup
+						title="Mobile"
+						subText="High-performance native & cross-platform experiences."
+						skills={[
+							"React Native",
+							"Expo",
+							"Cross-Platform Development",
+							"Native Modules (Kotlin/Swift)",
+							"Mobile Performance Optimization",
+						]}
+						extra="pt-[3dvh]"
+					/>
+
+					<SkillsGroup
+						title="Tools & Workflow"
+						subText="Version control, CI/CD & development workflow."
+						skills={[
+							"Git & GitHub",
+							"Figma",
+							"Postman",
+							"VS Code",
+							"Linux",
+						]}
+						extra="pt-[3dvh]"
+					/>
+				</div>
 			</section>
 			<section
 				id="resume"
