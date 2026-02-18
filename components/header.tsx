@@ -38,7 +38,7 @@ export default function Header(): ReactElement {
 				show ? "translate-y-0" : "-translate-y-full"
 			}`}
 		>
-			<div className="flex justify-between px-10 sm:px-20 py-[1.7vh] items-center bg-white shadow-xs">
+			<div className="flex justify-between px-10 md:px-20 py-[1.7vh] items-center bg-white shadow-xs">
 				<Link
 					href="/"
 					className="flex flex-row gap-x-[1vw] cursor-pointer items-center"
@@ -55,11 +55,12 @@ export default function Header(): ReactElement {
 					</span>
 				</Link>
 				<div className="hidden md:flex flex-row gap-x-[2vw] items-center">
-					<HeaderNavLink title={"Work"} navTo={"/work"} />
+					<HeaderNavLink title={"Work"} navTo={"/work?limit=6"} />
 					<HeaderNavLink title={"About"} navTo={"/about"} />
 					<a
 						href="/#resume"
-						className="text-lg cursor-pointer transition-all hover:-translate-y-1 duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB]"
+						className="text-lg cursor-pointer transition-all hover:-translate-y-1 duration-200 ease-in-out 
+                        hover:text-[#0F1724] text-[#98A0AB]"
 					>
 						Resume
 					</a>
@@ -93,10 +94,19 @@ export default function Header(): ReactElement {
 			</div>
 			{mobileOpen && (
 				<div className="md:hidden pt-6 justify-self-end flex flex-col gap-4 px-6 bg-white shadow-xs h-[100vh] w-2/3 sm:w-1/2">
-					<HeaderNavLink title={"Work"} navTo={"/work"} />
-					<HeaderNavLink title={"About"} navTo={"/about"} />
+					<HeaderNavLink
+						title={"Work"}
+						navTo={"/work?limit=6"}
+						callBack={() => setMobileOpen(!mobileOpen)}
+					/>
+					<HeaderNavLink
+						title={"About"}
+						navTo={"/about"}
+						callBack={() => setMobileOpen(!mobileOpen)}
+					/>
 					<a
 						href="/#resume"
+						onClick={() => setMobileOpen(!mobileOpen)}
 						className="text-lg transition-all duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB] cursor-pointer"
 					>
 						Resume

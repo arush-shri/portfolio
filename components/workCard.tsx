@@ -19,7 +19,7 @@ export default function WorkCard({ index }: { index: number }): ReactElement {
 	return (
 		<div
 			onClick={handleClick}
-			className="flex flex-col mb-[3dvh] md:mb-0 rounded-xl w-full overflow-hidden bg-white shadow-xs
+			className="flex flex-col mb-[2dvh] md:mb-0 rounded-2xl w-full overflow-hidden bg-white shadow-xs
             border-1 border-[#0000001F] cursor-pointer"
 		>
 			<Image
@@ -30,7 +30,7 @@ export default function WorkCard({ index }: { index: number }): ReactElement {
 				height={512}
 				className="w-full h-[34dvh] md:h-[32dvh] object-cover"
 			/>
-			<div className="px-[2vw] pb-[2vw] flex flex-col">
+			<div className="px-[2vw] pb-[2vh] flex flex-col">
 				<span className="font-semibold text-[#0F1724] text-xl mt-[2dvh]">
 					{data.name}
 				</span>
@@ -56,7 +56,7 @@ export function ViewWorkButton(): ReactElement {
 	const router: AppRouterInstance = useRouter();
 
 	const handleClick = () => {
-		router.push(`/work`);
+		router.push(`/work?limit=6`);
 	};
 
 	return (

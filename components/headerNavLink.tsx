@@ -7,9 +7,11 @@ import { ReactElement } from "react";
 export default function HeaderNavLink({
 	title,
 	navTo,
+	callBack,
 }: {
 	title: string;
 	navTo: string;
+	callBack: () => void | null;
 }): ReactElement {
 	const pathname = usePathname();
 	const isActive = pathname === navTo;
@@ -17,6 +19,7 @@ export default function HeaderNavLink({
 	return (
 		<Link
 			key={navTo}
+			onClick={callBack}
 			href={navTo}
 			className={`text-lg transition-all hover:-translate-y-1 duration-200 ease-in-out hover:text-[#0F1724] ${
 				isActive ? "text-[#0F1724] font-semibold" : "text-[#98A0AB]"

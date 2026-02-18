@@ -29,15 +29,15 @@ export default function Home() {
 
 					<div className="flex flex-row w-full gap-x-[1.5vw] pt-[5dvh] md:pt-[8dvh] items-center">
 						<a
-							href="/work"
-							className="text-md md:text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
+							href="/work?limit=6"
+							className="font-medium text-md md:text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
 							View Work
 						</a>
 						<a
 							href="/docs/Arush Shrivastava.pdf"
 							download
-							className="flex flex-row items-center gap-x-[0.5vw] text-md md:text-lg px-4 py-2 border-1 border-[#0000001F] text-[#0F1724] rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
+							className="font-medium flex flex-row items-center gap-x-[0.5vw] text-md md:text-lg px-4 py-2 border-1 border-[#0000001F] text-[#0F1724] rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
 							<Download className="w-5 sm:w-6 text-[#0F1724]" />
 							<span>Download CV</span>
