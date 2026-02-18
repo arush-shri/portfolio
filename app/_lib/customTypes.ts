@@ -11,6 +11,7 @@ export type WorkObjType = {
     client: string;
     problem: string;
     solution: string;
+    role: string;
     features: string[];
 };
 
@@ -27,3 +28,8 @@ export type ExpObjType = {
 };
 
 export type ExpArrType = ExpObjType[];
+
+export type MediaItem = {
+  type: "image" | "video";
+  src: string;
+};

@@ -13,14 +13,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
 			description: "Community-based tool sharing web app.",
 			startAt: "Jan 2025",
 			endAt: "Apr 2025",
-			images: ["/images/logo.png"],
-			videos: [],
+			images: ["/images/logo.png", "/images/myPic.png"],
+			videos: ["https://vimeo.com/475068701?fl=pl&fe=cm"],
 			stack: ["Next.js", "AWS", "Redis", "Stack"],
 			repo: "https://github.com/arush-shri/toolshare-platform",
 			client: "Personal Project",
 			problem: "Tool access inefficiency in communities.",
 			solution: "Built scalable full-stack solution.",
 			features: ["Search tools", "Upload listings", "Authentication"],
+			role: "aaaaaaa",
 		},
 		{
 			id: "22",
@@ -36,6 +37,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 			problem: "Tool access inefficiency in communities.",
 			solution: "Built scalable full-stack solution.",
 			features: ["Search tools", "Upload listings", "Authentication"],
+			role: "bbbbbbbbb",
 		},
 		{
 			id: "33",
@@ -51,6 +53,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 			problem: "Tool access inefficiency in communities.",
 			solution: "Built scalable full-stack solution.",
 			features: ["Search tools", "Upload listings", "Authentication"],
+			role: "ccccccccc",
 		},
 	]);
 
