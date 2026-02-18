@@ -56,7 +56,6 @@ export default function Header(): ReactElement {
 				</Link>
 				<div className="hidden md:flex flex-row gap-x-[2vw] items-center">
 					<HeaderNavLink title={"Work"} navTo={"/work?limit=6"} />
-					<HeaderNavLink title={"About"} navTo={"/about"} />
 					<a
 						href="/#resume"
 						className="text-lg cursor-pointer transition-all hover:-translate-y-1 duration-200 ease-in-out 
@@ -97,11 +96,6 @@ export default function Header(): ReactElement {
 					<HeaderNavLink
 						title={"Work"}
 						navTo={"/work?limit=6"}
-						callBack={() => setMobileOpen(!mobileOpen)}
-					/>
-					<HeaderNavLink
-						title={"About"}
-						navTo={"/about"}
 						callBack={() => setMobileOpen(!mobileOpen)}
 					/>
 					<a
