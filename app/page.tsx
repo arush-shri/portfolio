@@ -15,8 +15,8 @@ import { ReactElement } from "react";
 export default function Home(): ReactElement {
 	return (
 		<div className="flex flex-col">
-			<section className="flex flex-col md:flex-row min-h-screen items-center justify-between px-5 lg:px-20">
-				<div className="flex w-full md:w-1/2 md:min-h-screen flex-col justify-start pt-[8dvh] md:pt-[15dvh] order-2 md:order-1">
+			<section className="flex flex-col md:flex-row items-center justify-between px-5 lg:px-20">
+				<div className="flex w-full md:w-1/2 flex-col justify-start pt-[8dvh] md:pt-[15dvh] order-2 md:order-1">
 					<span className="font-bold text-[#0F1724] text-4xl md:text-5xl">
 						Full-Stack Engineer Building Scalable, High-Performance
 						Software.
@@ -63,11 +63,11 @@ export default function Home(): ReactElement {
 					</div>
 				</div>
 				<div
-					className="flex w-full md:w-1/2 md:min-h-screen flex-col justify-center items-center 
+					className="flex w-full md:w-1/2 flex-col justify-center items-center 
                 md:items-end pt-[15dvh] order-1 md:order-2"
 				>
 					<Image
-						className="rounded-full md:rounded-4xl w-3/4 aspect-square md:aspect-auto object-cover md:h-auto"
+						className="rounded-full md:rounded-4xl w-3/4 aspect-square md:aspect-auto object-cover"
 						src="/images/myPic.png"
 						alt="My pic"
 						width={801}
@@ -76,25 +76,25 @@ export default function Home(): ReactElement {
 					/>
 				</div>
 			</section>
-			<section className="md:min-h-screen flex flex-col justify-center px-5 lg:px-20 mt-[8dvh] md:mt-0">
-				<div className="flex flex-row w-full justify-between items-center">
+			<section className="flex flex-col justify-center px-5 lg:px-20 mt-[4dvh] md:mt-30">
+				<div className="flex flex-col sm:flex-row w-full justify-between sm:items-center">
 					<div className="flex flex-col">
 						<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
 							Selected Work
 						</span>
-						<span className="text-[#98A0AB] text-md md:text-xl mt-[2dvh] ">
+						<span className="text-[#98A0AB] text-md md:text-xl mt-2 ">
 							A selection of projects I've worked on recently.
 						</span>
 					</div>
 					<ViewWorkButton />
 				</div>
-				<div className="flex flex-col md:flex-row gap-x-[2vw] w-full mt-[7dvh] justify-between items-center">
+				<div className="flex flex-col md:flex-row gap-x-[2vw] w-full mt-[7dvh] justify-between items-start">
 					<WorkCard index={0} />
 					<WorkCard index={1} />
 					<WorkCard index={2} />
 				</div>
 			</section>
-			<section className="min-h-screen flex flex-col justify-center px-5 lg:px-20">
+			<section className="flex flex-col justify-center px-5 lg:px-20 mt-[4dvh] md:mt-30">
 				<div className="flex flex-row w-full justify-between items-center">
 					<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
 						Experience
@@ -102,8 +102,8 @@ export default function Home(): ReactElement {
 				</div>
 				<ExperienceList />
 			</section>
-			<section className="flex flex-col md:flex-row min-h-screen justify-between px-5 lg:px-20">
-				<div className="flex w-full md:w-2/5 md:min-h-screen flex-col justify-start">
+			<section className="flex flex-col md:flex-row justify-between px-5 lg:px-20 mt-[4dvh] md:mt-30">
+				<div className="flex w-full md:w-2/5 flex-col justify-start">
 					<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
 						Technical Skills
 					</span>
@@ -113,7 +113,7 @@ export default function Home(): ReactElement {
 						and reliability.
 					</span>
 				</div>
-				<div className="flex flex-col w-full md:w-3/5 justify-start md:min-h-screen md:pl-8 flex-col pb-[8dvh] pt-[2dvh] md:pt-0">
+				<div className="flex flex-col w-full md:w-3/5 justify-start md:pl-8 flex-col pb-[8dvh] pt-[2dvh] md:pt-0">
 					<SkillsGroup
 						title="Frontend"
 						subText="Interfaces, interactions & performance"
@@ -233,11 +233,9 @@ export default function Home(): ReactElement {
 				id="contact"
 				className="flex flex-col justify-center px-5 lg:px-40"
 			>
-				<a
-					href="/docs/Arush Shrivastava.pdf"
-					download
+				<div
 					className="flex flex-col justify-between bg-[#0f1724] px-[3dvw] py-7 mb-[8dvh] border-3
-                    border-[#0e9e9d] shadow-lg rounded-xl cursor-pointer"
+                    border-[#0e9e9d] shadow-lg rounded-xl"
 				>
 					<span className="font-semibold text-lg text-[#adbcbf]">
 						LET'S COLLABORATE
@@ -249,22 +247,32 @@ export default function Home(): ReactElement {
 						Open to impactful engineering roles and high-leverage
 						freelance work.
 					</span>
-					<div className="w-full flex flex-row justify-between sm:justify-start gap-x-[1.5vw] mt-[4dvh] items-center">
-						<button
+					<div
+						className="w-full flex flex-col sm:flex-row justify-between sm:justify-start gap-[1.5vw] mt-[4dvh] 
+                        items-start sm:items-center"
+					>
+						<a
+							href="mailto:shri.arush03@gmail.com"
 							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 bg-[#0EA5A4] items-center
                             rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
 							<Mail className="w-5 text-white" />
 							<span className="text-lg text-white">Email Me</span>
-						</button>
-						<button
+						</a>
+						<a
+							href="https://www.linkedin.com/in/arush-shri"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 items-center border-1 border-white
                             rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
 							<Linkedin className="w-5 text-white" />
 							<span className="text-lg text-white">LinkedIn</span>
-						</button>
-						<button
+						</a>
+						<a
+							href="https://calendly.com/arush-shri/30min"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 items-center border-1 border-[#0EA5A4]
                             rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
@@ -272,9 +280,9 @@ export default function Home(): ReactElement {
 							<span className="text-lg text-[#0EA5A4]">
 								Calendly
 							</span>
-						</button>
+						</a>
 					</div>
-				</a>
+				</div>
 			</section>
 		</div>
 	);

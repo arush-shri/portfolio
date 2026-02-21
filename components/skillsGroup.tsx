@@ -19,7 +19,7 @@ export default function SkillsGroup({
 				</span>
 				<span className="text-[#98A0AB] text-md">{subText}</span>
 			</div>
-			<div className="flex flex-wrap items-center gap-x-[1dvw] gap-y-[1.5dvh]">
+			<div className="flex flex-wrap items-center gap-x-2 gap-y-2">
 				{skills.map((skill, index) => (
 					<div
 						key={index}

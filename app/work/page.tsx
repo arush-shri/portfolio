@@ -21,8 +21,8 @@ export default function Work(): ReactElement {
 	};
 
 	return (
-		<div className="flex flex-col min-h-screen px-5 lg:px-20">
-			<section className="flex flex-col pt-[12dvh] md:pt-[19dvh] border-b-1 border-[#0000001F] pb-[5dvh]">
+		<div className="flex flex-col px-5 lg:px-20">
+			<section className="flex flex-col pt-26 md:pt-32 border-b-1 border-[#0000001F] pb-[5dvh]">
 				<span className="font-bold text-[#0F1724] text-4xl ">
 					All Projects
 				</span>
@@ -32,7 +32,7 @@ export default function Work(): ReactElement {
 					experience in mind.
 				</span>
 			</section>
-			<section className="flex flex-col md:grid md:grid-cols-3 gap-4 pt-[2dvh] md:pt-[5dvh] mb-[8dvh]">
+			<section className="flex flex-col md:grid md:grid-cols-3 gap-4 pt-[2dvh] md:pt-[5dvh] mb-[8dvh] items-start">
 				{Array.from(
 					{ length: Math.min(maxLimit, dataLen) },
 					(_, idx) => (

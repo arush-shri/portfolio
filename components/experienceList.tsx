@@ -8,10 +8,10 @@ export default function ExperienceList(): ReactElement {
 	const data: ExpArrType = useExpContext();
 
 	return (
-		<div className="flex flex-col w-full mt-[2dvh]">
+		<div className="flex flex-col w-full mt-2">
 			{data.map((item, index) => (
 				<div
-					className={`md:grid md:grid-cols-4 gap-x-[2vw] py-[3dvh] border-b border-[#0000001F] last:border-b-0`}
+					className={`md:grid md:grid-cols-4 gap-x-[2vw] py-2 border-b border-[#0000001F] last:border-b-0`}
 					key={index}
 				>
 					<div>

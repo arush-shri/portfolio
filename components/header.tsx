@@ -38,17 +38,17 @@ export default function Header(): ReactElement {
 				show ? "translate-y-0" : "-translate-y-full"
 			}`}
 		>
-			<div className="flex justify-between px-10 md:px-20 py-[1.7vh] items-center bg-white shadow-xs">
+			<div className="flex justify-between px-10 md:px-20 py-3 items-center bg-white shadow-xs">
 				<Link
 					href="/"
-					className="flex flex-row gap-x-[1vw] cursor-pointer items-center"
+					className="flex flex-row gap-x-[1vw] cursor-pointer items-center h-10"
 				>
 					<Image
 						src="/images/logo.png"
 						alt="My logo"
 						width={512}
 						height={512}
-						className="h-[5vh] sm:h-[6vh] w-auto"
+						className="h-full w-auto object-contain"
 					/>
 					<span className="text-[#0F1724] font-bold text-xl sm:text-2xl">
 						ARUSH

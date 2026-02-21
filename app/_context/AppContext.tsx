@@ -1,61 +1,28 @@
 "use client";
 
-import { createContext, ReactNode, useContext, useState } from "react";
+import {
+	createContext,
+	ReactNode,
+	useContext,
+	useEffect,
+	useState,
+} from "react";
 import { WorkArrType } from "../_lib/customTypes";
 
 const AppContext = createContext<WorkArrType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-	const [projectData, setProjectData] = useState<WorkArrType | undefined>([
-		{
-			id: "11",
-			name: "1",
-			description: "Community-based tool sharing web app.",
-			startAt: "Jan 2025",
-			endAt: "Apr 2025",
-			images: ["/images/logo.png", "/images/myPic.png"],
-			videos: ["https://vimeo.com/475068701?fl=pl&fe=cm"],
-			stack: ["Next.js", "AWS", "Redis", "Stack"],
-			repo: "https://github.com/arush-shri/toolshare-platform",
-			client: "Personal Project",
-			problem: "Tool access inefficiency in communities.",
-			solution: "Built scalable full-stack solution.",
-			features: ["Search tools", "Upload listings", "Authentication"],
-			role: "aaaaaaa",
-		},
-		{
-			id: "22",
-			name: "Platform",
-			description: "Community-based tool sharing web app.",
-			startAt: "Jan 2025",
-			endAt: "Apr 2025",
-			images: ["/images/myPic.png"],
-			videos: [],
-			stack: ["Next.js", "AWS", "Redis"],
-			repo: "https://github.com/arush-shri/toolshare-platform",
-			client: "Personal Project",
-			problem: "Tool access inefficiency in communities.",
-			solution: "Built scalable full-stack solution.",
-			features: ["Search tools", "Upload listings", "Authentication"],
-			role: "bbbbbbbbb",
-		},
-		{
-			id: "33",
-			name: "ToolShare",
-			description: "Community-based tool sharing web app.",
-			startAt: "Jan 2025",
-			endAt: "Apr 2025",
-			images: ["/images/logo.png"],
-			videos: [],
-			stack: ["Next.js", "AWS", "Redis"],
-			repo: "https://github.com/arush-shri/toolshare-platform",
-			client: "Personal Project",
-			problem: "Tool access inefficiency in communities.",
-			solution: "Built scalable full-stack solution.",
-			features: ["Search tools", "Upload listings", "Authentication"],
-			role: "ccccccccc",
-		},
-	]);
+	const [projectData, setProjectData] = useState<WorkArrType | undefined>([]);
+
+	const getData = async () => {
+		const res = await fetch("/api/work");
+		const json = await res.json();
+		setProjectData(json.data);
+	};
+
+	useEffect(() => {
+		getData();
+	}, []);
 
 	return (
 		<AppContext.Provider value={projectData}>
