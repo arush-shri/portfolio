@@ -11,7 +11,7 @@ export default function HeaderNavLink({
 }: {
 	title: string;
 	navTo: string;
-	callBack: () => void | null;
+	callBack?: () => void;
 }): ReactElement {
 	const pathname = usePathname();
 	const isActive = pathname === navTo;
