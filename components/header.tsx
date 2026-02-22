@@ -41,7 +41,7 @@ export default function Header(): ReactElement {
 			<div className="flex justify-between px-10 md:px-20 py-3 items-center bg-white shadow-xs">
 				<Link
 					href="/"
-					className="flex flex-row gap-x-[1vw] cursor-pointer items-center h-10"
+					className="flex flex-row gap-x-2 cursor-pointer items-center h-10"
 				>
 					<Image
 						src="/images/logo.png"
@@ -54,21 +54,21 @@ export default function Header(): ReactElement {
 						ARUSH
 					</span>
 				</Link>
-				<div className="hidden md:flex flex-row gap-x-[2vw] items-center">
+				<div className="hidden md:flex flex-row gap-x-5 items-center">
 					<HeaderNavLink title={"Work"} navTo={"/work?limit=6"} />
-					<a
+					<Link
 						href="/#resume"
 						className="text-lg cursor-pointer transition-all hover:-translate-y-1 duration-200 ease-in-out 
                         hover:text-[#0F1724] text-[#98A0AB]"
 					>
 						Resume
-					</a>
-					<a
+					</Link>
+					<Link
 						href="/#contact"
 						className="px-4 py-2 bg-[#0EA5A4] text-white rounded-lg hover:bg-[#0F1724] transition-all duration-200 hover:-translate-y-1"
 					>
 						Let's Talk
-					</a>
+					</Link>
 				</div>
 				<button
 					onClick={() => setMobileOpen(!mobileOpen)}
@@ -98,13 +98,13 @@ export default function Header(): ReactElement {
 						navTo={"/work?limit=6"}
 						callBack={() => setMobileOpen(!mobileOpen)}
 					/>
-					<a
+					<Link
 						href="/#resume"
 						onClick={() => setMobileOpen(!mobileOpen)}
 						className="text-lg transition-all duration-200 ease-in-out hover:text-[#0F1724] text-[#98A0AB] cursor-pointer"
 					>
 						Resume
-					</a>
+					</Link>
 					<button
 						onClick={handleContact}
 						className="text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg hover:bg-[#0F1724] transition-all duration-200 hover:-translate-y-1"

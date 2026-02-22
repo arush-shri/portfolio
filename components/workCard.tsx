@@ -1,14 +1,14 @@
 "use client";
 
 import { useAppContext } from "@/app/_context/AppContext";
-import { WorkArrType, WorkObjType } from "@/app/_lib/customTypes";
+import { WorkObjType } from "@/app/_lib/customTypes";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ReactElement } from "react";
 
 export default function WorkCard({ index }: { index: number }): ReactElement {
-	const projectData: WorkArrType = useAppContext();
+	const { projectData } = useAppContext();
 	const data: WorkObjType = projectData[index];
 	const router: AppRouterInstance = useRouter();
 
@@ -21,7 +21,7 @@ export default function WorkCard({ index }: { index: number }): ReactElement {
 	return (
 		<div
 			onClick={handleClick}
-			className="flex flex-col mb-[2dvh] md:mb-0 rounded-2xl w-full overflow-hidden bg-white shadow-xs
+			className="flex flex-col mb-4 md:mb-0 rounded-2xl w-full overflow-hidden bg-white shadow-xs
             border-1 border-[#0000001F] cursor-pointer"
 		>
 			{data.images?.length > 0 && (
@@ -34,17 +34,17 @@ export default function WorkCard({ index }: { index: number }): ReactElement {
 					className="w-full h-auto object-cover"
 				/>
 			)}
-			<div className="px-3 pb-[2vh] flex flex-col">
-				<span className="font-semibold text-[#0F1724] text-xl mt-[2dvh]">
+			<div className="px-3 pb-3 flex flex-col">
+				<span className="font-semibold text-[#0F1724] text-xl mt-3">
 					{data.name}
 				</span>
-				<span className="text-[#98A0AB] text-md mt-[1dvh]">
+				<span className="text-[#98A0AB] text-md mt-1">
 					{data.description}
 				</span>
-				<div className="flex flex-wrap gap-y-[0.6vh] gap-x-[1vw] mt-[2dvh] items-center">
+				<div className="flex flex-wrap gap-y-2 gap-x-2 mt-3 items-center">
 					{data.stack.slice(0, 3).map((item, index) => (
 						<span
-							className="text-[#064B47] px-[3vw] md:px-[1vw] py-[0.2dvh] bg-[#d8f3f1] rounded-full text-md 
+							className="text-[#064B47] px-3 py-0.5 bg-[#d8f3f1] rounded-full text-md 
                             justify-center items-center text-clip"
 							key={index}
 						>

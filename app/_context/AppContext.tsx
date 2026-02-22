@@ -9,15 +9,20 @@ import {
 } from "react";
 import { WorkArrType } from "../_lib/customTypes";
 
-const AppContext = createContext<WorkArrType | undefined>(undefined);
+const AppContext = createContext<{
+	projectData: WorkArrType;
+	isLoading: boolean;
+}>({ projectData: [], isLoading: false });
 
 export function AppProvider({ children }: { children: ReactNode }) {
-	const [projectData, setProjectData] = useState<WorkArrType | undefined>([]);
+	const [projectData, setProjectData] = useState<WorkArrType>([]);
+	const [isLoading, setIsLoading] = useState<boolean>(true);
 
 	const getData = async () => {
 		const res = await fetch("/api/work");
 		const json = await res.json();
 		setProjectData(json.data);
+		setIsLoading(false);
 	};
 
 	useEffect(() => {
@@ -25,7 +30,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 	}, []);
 
 	return (
-		<AppContext.Provider value={projectData}>
+		<AppContext.Provider value={{ projectData, isLoading }}>
 			{children}
 		</AppContext.Provider>
 	);

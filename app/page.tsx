@@ -16,7 +16,7 @@ export default function Home(): ReactElement {
 	return (
 		<div className="flex flex-col">
 			<section className="flex flex-col md:flex-row items-center justify-between px-5 lg:px-20">
-				<div className="flex w-full md:w-1/2 flex-col justify-start pt-[8dvh] md:pt-[15dvh] order-2 md:order-1">
+				<div className="flex w-full md:w-1/2 flex-col justify-start pt-14 md:pt-28 order-2 md:order-1">
 					<span className="font-bold text-[#0F1724] text-4xl md:text-5xl">
 						Full-Stack Engineer Building Scalable, High-Performance
 						Software.
@@ -28,7 +28,7 @@ export default function Home(): ReactElement {
 						performance, reliability, and long-term maintainability.
 					</span>
 
-					<div className="flex flex-row w-full gap-x-[1.5vw] pt-[5dvh] md:pt-[8dvh] items-center">
+					<div className="flex flex-row w-full gap-x-3 pt-9 md:pt-13 items-center">
 						<a
 							href="/work?limit=6"
 							className="font-medium text-md md:text-lg px-4 py-2 bg-[#0EA5A4] text-white rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
@@ -38,14 +38,14 @@ export default function Home(): ReactElement {
 						<a
 							href="/docs/Arush Shrivastava.pdf"
 							download
-							className="font-medium flex flex-row items-center gap-x-[0.5vw] text-md md:text-lg px-4 py-2 border-1 border-[#0000001F] text-[#0F1724] rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
+							className="font-medium flex flex-row items-center gap-x-1 text-md md:text-lg px-4 py-2 border-1 border-[#0000001F] text-[#0F1724] rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
 							<Download className="w-5 sm:w-6 text-[#0F1724]" />
 							<span>Download CV</span>
 						</a>
 					</div>
 
-					<div className="flex flex-row gap-x-[1vw] pt-[7dvh] md:pt-[10dvh] items-center">
+					<div className="flex flex-row gap-x-2 pt-11 md:pt-16 items-center">
 						<a
 							href="https://github.com/arush-shri"
 							target="_blank"
@@ -64,7 +64,7 @@ export default function Home(): ReactElement {
 				</div>
 				<div
 					className="flex w-full md:w-1/2 flex-col justify-center items-center 
-                md:items-end pt-[15dvh] order-1 md:order-2"
+                md:items-end pt-23 order-1 md:order-2"
 				>
 					<Image
 						className="rounded-full md:rounded-4xl w-3/4 aspect-square md:aspect-auto object-cover"
@@ -76,7 +76,7 @@ export default function Home(): ReactElement {
 					/>
 				</div>
 			</section>
-			<section className="flex flex-col justify-center px-5 lg:px-20 mt-[4dvh] md:mt-30">
+			<section className="flex flex-col justify-center px-5 lg:px-20 mt-10 md:mt-30">
 				<div className="flex flex-col sm:flex-row w-full justify-between sm:items-center">
 					<div className="flex flex-col">
 						<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
@@ -88,13 +88,13 @@ export default function Home(): ReactElement {
 					</div>
 					<ViewWorkButton />
 				</div>
-				<div className="flex flex-col md:flex-row gap-x-[2vw] w-full mt-[7dvh] justify-between items-start">
+				<div className="flex flex-col md:flex-row gap-x-3 w-full mt-10 justify-between items-start">
 					<WorkCard index={0} />
 					<WorkCard index={1} />
 					<WorkCard index={2} />
 				</div>
 			</section>
-			<section className="flex flex-col justify-center px-5 lg:px-20 mt-[4dvh] md:mt-30">
+			<section className="flex flex-col justify-center px-5 lg:px-20 mt-10 md:mt-30">
 				<div className="flex flex-row w-full justify-between items-center">
 					<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
 						Experience
@@ -102,7 +102,7 @@ export default function Home(): ReactElement {
 				</div>
 				<ExperienceList />
 			</section>
-			<section className="flex flex-col md:flex-row justify-between px-5 lg:px-20 mt-[4dvh] md:mt-30">
+			<section className="flex flex-col md:flex-row justify-between px-5 lg:px-20 mt-10 md:mt-30">
 				<div className="flex w-full md:w-2/5 flex-col justify-start">
 					<span className="font-bold text-[#0F1724] text-2xl md:text-4xl">
 						Technical Skills
@@ -113,7 +113,7 @@ export default function Home(): ReactElement {
 						and reliability.
 					</span>
 				</div>
-				<div className="flex flex-col w-full md:w-3/5 justify-start md:pl-8 flex-col pb-[8dvh] pt-[2dvh] md:pt-0">
+				<div className="flex flex-col w-full md:w-3/5 justify-start md:pl-8 flex-col pb-14 pt-4 md:pt-0">
 					<SkillsGroup
 						title="Frontend"
 						subText="Interfaces, interactions & performance"
@@ -146,7 +146,7 @@ export default function Home(): ReactElement {
 							"Input Validation",
 							"API Security Best Practices",
 						]}
-						extra="pt-[3dvh]"
+						extra="pt-5"
 					/>
 					<SkillsGroup
 						title="Data & Persistence"
@@ -160,7 +160,7 @@ export default function Home(): ReactElement {
 							"Data Modeling",
 							"Caching Strategies",
 						]}
-						extra="pt-[3dvh]"
+						extra="pt-5"
 					/>
 					<SkillsGroup
 						title="Infrastructure"
@@ -174,7 +174,7 @@ export default function Home(): ReactElement {
 							"Environment Configuration",
 							"Monitoring & Logging",
 						]}
-						extra="pt-[3dvh]"
+						extra="pt-5"
 					/>
 					<SkillsGroup
 						title="Mobile"
@@ -186,7 +186,7 @@ export default function Home(): ReactElement {
 							"Native Modules (Kotlin/Swift)",
 							"Mobile Performance Optimization",
 						]}
-						extra="pt-[3dvh]"
+						extra="pt-5"
 					/>
 
 					<SkillsGroup
@@ -199,7 +199,7 @@ export default function Home(): ReactElement {
 							"VS Code",
 							"Linux",
 						]}
-						extra="pt-[3dvh]"
+						extra="pt-5"
 					/>
 				</div>
 			</section>
@@ -210,10 +210,10 @@ export default function Home(): ReactElement {
 				<a
 					href="/docs/Arush Shrivastava.pdf"
 					download
-					className="flex flex-row items-center justify-between px-[3dvw] py-4 mb-[8dvh] border-1 border-[#0000001F] 
+					className="flex flex-row items-center justify-between px-5 lg:px-10 py-4 mb-15 border-1 border-[#0000001F] 
                     rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 				>
-					<div className="flex flex-row item-center gap-x-[2vw]">
+					<div className="flex flex-row item-center gap-x-4">
 						<div className="p-2.5 bg-[#d8f3f1] rounded-full self-center">
 							<FileText className="w-5 sm:w-6 text-[#000000]" />
 						</div>
@@ -234,26 +234,26 @@ export default function Home(): ReactElement {
 				className="flex flex-col justify-center px-5 lg:px-40"
 			>
 				<div
-					className="flex flex-col justify-between bg-[#0f1724] px-[3dvw] py-7 mb-[8dvh] border-3
+					className="flex flex-col justify-between bg-[#0f1724] px-5 lg:px-10 py-7 mb-14 border-3
                     border-[#0e9e9d] shadow-lg rounded-xl"
 				>
 					<span className="font-semibold text-lg text-[#adbcbf]">
 						LET'S COLLABORATE
 					</span>
-					<span className="text-2xl font-bold text-[#fff] mt-[1dvh]">
+					<span className="text-2xl font-bold text-[#fff] mt-2">
 						Ready to build something exceptional?
 					</span>
-					<span className="font-semibold text-lg text-[#adbcbf] mt-[1dvh]">
+					<span className="font-semibold text-lg text-[#adbcbf] mt-2">
 						Open to impactful engineering roles and high-leverage
 						freelance work.
 					</span>
 					<div
-						className="w-full flex flex-col sm:flex-row justify-between sm:justify-start gap-[1.5vw] mt-[4dvh] 
+						className="w-full flex flex-col sm:flex-row justify-between sm:justify-start gap-3 mt-6 
                         items-start sm:items-center"
 					>
 						<a
 							href="mailto:shri.arush03@gmail.com"
-							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 bg-[#0EA5A4] items-center
+							className="flex flex-row gap-x-1.5 px-5 py-3 bg-[#0EA5A4] items-center
                             rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
 							<Mail className="w-5 text-white" />
@@ -263,7 +263,7 @@ export default function Home(): ReactElement {
 							href="https://www.linkedin.com/in/arush-shri"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 items-center border-1 border-white
+							className="flex flex-row gap-x-1.5 px-5 py-3 items-center border-1 border-white
                             rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
 							<Linkedin className="w-5 text-white" />
@@ -273,7 +273,7 @@ export default function Home(): ReactElement {
 							href="https://calendly.com/arush-shri/30min"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex flex-row gap-x-[1dvw] px-[2dvw] py-3 items-center border-1 border-[#0EA5A4]
+							className="flex flex-row gap-x-1.5 px-5 py-3 items-center border-1 border-[#0EA5A4]
                             rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-1"
 						>
 							<Calendar className="w-5 text-[#0EA5A4]" />

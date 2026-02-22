@@ -12,7 +12,7 @@ export default function SkillsGroup({
 	extra: string | undefined;
 }): ReactElement {
 	return (
-		<div className={`flex flex-col gap-y-[1dvh] w-full ${extra}`}>
+		<div className={`flex flex-col gap-y-1.5 w-full ${extra}`}>
 			<div className="flex flex-col gap-y-1 md:gap-x-4 md:flex-row md:justify-between md:items-center">
 				<span className="font-bold text-[#0F1724] text-2xl">
 					{title}

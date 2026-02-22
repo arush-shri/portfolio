@@ -3,14 +3,14 @@ import { ReactElement } from "react";
 
 export default function Footer(): ReactElement {
 	return (
-		<div className="px-5 sm:px-12 bg-white w-full justify-between items-center flex flex-row gap-x-[1vw] py-[1.5vh]">
-			<div className="flex flex-row gap-x-[1vw] items-center">
+		<div className="px-5 sm:px-12 bg-white w-full justify-between items-center flex flex-row gap-x-1 py-2.5">
+			<div className="flex flex-row gap-x-2 items-center">
 				<Copyright className="w-5 sm:w-6 text-[#6b7280]" />
 				<span className="text-[#6b7280] text-sm sm:text-lg">
 					2025 Arush Shrivastava.
 				</span>
 			</div>
-			<div className="flex flex-row gap-x-[1vw] items-center">
+			<div className="flex flex-row gap-x-2 items-center">
 				<a
 					href="https://github.com/arush-shri"
 					target="_blank"
